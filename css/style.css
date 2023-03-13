@@ -6,8 +6,10 @@
   --green-color:#99E2D0;
   --green-font:#008766;
   --grey-color:#353535;
+  --darkGrey-color:#7E7E7E;
   --lightGrey-color:rgba(246, 246, 246, 1);
   --hover-color:rgba(245, 237, 255, 1);
+  --gradients-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 html {
@@ -18,21 +20,33 @@ html {
 
 body {
   margin: 0px;
+  max-width: 768px;
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 28px;
-}
-
-.fontTitle {
+  font-size: 24px;
   font-weight: 700;
+  line-height: 28px;
+  margin: 50px 20px 20px 20px;
 }
 
-.fontTitleMenu {
+a {
+  text-decoration: none;
+}
+
+.W300FS18 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.W500FS19 {
   font-weight: 500;
   font-size: 19px;
+}
+
+.W700FS18 {
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .flexCenter {
@@ -56,6 +70,14 @@ h2 {
 
 .textCenter {
   text-align: center;
+}
+
+.backgroundGrey {
+  background: rgb(246, 246, 246);
+}
+
+.iconGrey i {
+  color: #7E7E7E;
 }
 
 /*********** HEADER **************/
@@ -82,17 +104,66 @@ nav .maps input {
   border: none;
   height: 100%;
   text-align: center;
-  font-size: 18px;
-  font-weight: 700;
+  color: var(--grey-color);
 }
 nav .maps input:focus {
   outline: none;
 }
-nav p {
-  margin: 20px;
-  font-weight: 800;
-  color: var(--grey-color);
-}
-nav .article-réserver {
+
+/***** Reserver *****/
+.article-réserverPadding {
   padding: 40px 20px;
+}
+
+.btn1 {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-family: "roboto", sans-serif;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/**** fontionnement ***/
+.btn2 {
+  width: 322px;
+  height: 72px;
+  border-radius: 20px;
+  background: rgb(246, 246, 246);
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 0px;
+  margin: 25px auto;
+  cursor: pointer;
+}
+
+.btn2 p {
+  margin-left: 20px;
+}
+.btn2:hover {
+  background: rgb(245, 237, 255);
+}
+.btn2:hover .iconPurple i {
+  color: #9356DC;
+}
+
+.cercleNumber {
+  border-radius: 50%;
+  background: #9356DC;
+  width: 24px;
+  height: 24px;
+  color: white;
+  margin: 0 20px 0 -12px;
+}
+.cercleNumber p {
+  margin: auto 0px;
 }/*# sourceMappingURL=style.css.map */

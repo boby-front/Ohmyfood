@@ -1,3 +1,6 @@
+@import "../SASS/Composants/button";
+@import "../SASS/Utils/variables";
+
 :root{
     --color-background:#F7F7F7;
     --primary-color:#9356DC;
@@ -5,8 +8,10 @@
     --green-color:#99E2D0;
     --green-font:#008766;
     --grey-color:#353535;
+    --darkGrey-color:#7E7E7E;
     --lightGrey-color:rgba(246, 246, 246, 1);
     --hover-color:rgba(245, 237, 255, 1);
+    --gradients-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 
@@ -18,21 +23,33 @@ html{
 
 body{
     margin: 0px;
+    max-width: 768px;
 }
 
 h2{
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 28px;
-}
-
-.fontTitle{
+    font-size: 24px;
     font-weight: 700;
+    line-height: 28px;
+    margin: 50px 20px 20px 20px;
 }
 
-.fontTitleMenu{
+a{
+    text-decoration: none;
+}
+
+.W300FS18{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.W500FS19{
     font-weight: 500;
     font-size: 19px;
+}
+
+.W700FS18{
+    font-weight: 700;
+    font-size: 18px;
 }
 
 
@@ -59,6 +76,16 @@ h2{
     text-align: center;
 }
 
+.backgroundGrey{
+    background: $lightGrey-color;
+}
+
+
+.iconGrey i{
+    color: $darkGrey-color;
+}
+
+
 /*********** HEADER **************/
 header{
     padding-top: 10px;
@@ -83,19 +110,50 @@ nav{
             border: none;
             height: 100%;
             text-align: center;
-            font-size: 18px;
-            font-weight: 700;
+            color: var(--grey-color);
             &:focus{
                 outline: none;
             }
         }
     }
+    
+}
+
+/***** Reserver *****/
+.article-réserverPadding{
+    padding: 40px 20px;
+}
+
+
+.btn1{
+    @include button
+}
+
+/**** fontionnement ***/
+.btn2{
+    @include button2($lightGrey-color)
+}
+
+.btn2{
     p{
-        margin:20px;
-        font-weight: 800;
-        color: var(--grey-color);
+        margin-left:  20px;    
     }
-    .article-réserver{
-        padding: 40px 20px;
+&:hover {
+    .iconPurple i{
+        color: $primary-color;
+    }
+    background: $hover-color;
+  }
+}
+
+.cercleNumber{
+    border-radius: 50%;
+    background:$primary-color;
+    width: 24px;
+    height: 24px;
+    color: white;
+margin: 0 20px 0 -12px;
+    p{
+        margin: auto 0px;
     }
 }
