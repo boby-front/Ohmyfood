@@ -5,8 +5,8 @@
   --secondary-color:#FCA311;
   --green-color:#99E2D0;
   --green-font:#008766;
-  --grey-color:#353535;
-  --darkGrey-color:#7E7E7E;
+  --darkGrey-color:#353535;
+  --grey-color:#7E7E7E;
   --lightGrey-color:rgba(246, 246, 246, 1);
   --hover-color:rgba(245, 237, 255, 1);
   --gradients-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -32,6 +32,7 @@ h2 {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .W300FS18 {
@@ -47,6 +48,11 @@ a {
 .W700FS18 {
   font-weight: 700;
   font-size: 18px;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
 }
 
 .flexCenter {
@@ -104,7 +110,7 @@ nav .maps input {
   border: none;
   height: 100%;
   text-align: center;
-  color: var(--grey-color);
+  color: var(--darkGrey-color);
 }
 nav .maps input:focus {
   outline: none;
@@ -130,6 +136,12 @@ nav .maps input:focus {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
+.shadowHover:hover {
+  background: white;
+  color: #9356DC;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
 /**** fontionnement ***/
 .btn2 {
   width: 322px;
@@ -151,6 +163,7 @@ nav .maps input:focus {
 }
 .btn2:hover {
   background: rgb(245, 237, 255);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
 }
 .btn2:hover .iconPurple i {
   color: #9356DC;
@@ -166,4 +179,67 @@ nav .maps input:focus {
 }
 .cercleNumber p {
   margin: auto 0px;
+}
+
+/********* Restaurant ***********/
+.card {
+  width: 335px;
+  height: 251px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 25px auto;
+}
+
+.card img {
+  height: 175px;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+#rotate {
+  transform: rotate;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.textCardflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 10px;
+}
+.textCardflex h3, .textCardflex p {
+  margin: 8px;
+}
+
+/*********** Animation Heart ***********/
+.heart i:hover {
+  font-size: 50px;
+  color: transparent;
+  background-image: var(--gradients-color);
+}
+
+/**************** Footer *****************/
+footer {
+  height: 197px;
+  background: #353535;
+  padding: 20px;
+  margin-top: 70px;
+  color: white;
+}
+footer svg {
+  width: 138px;
+  height: auto;
+  fill: #fff;
+  margin-bottom: 15px;
+}
+footer i {
+  margin-right: 10px;
+}
+footer p {
+  margin: 10px 0px;
 }/*# sourceMappingURL=style.css.map */

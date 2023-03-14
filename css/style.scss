@@ -7,8 +7,8 @@
     --secondary-color:#FCA311;
     --green-color:#99E2D0;
     --green-font:#008766;
-    --grey-color:#353535;
-    --darkGrey-color:#7E7E7E;
+    --darkGrey-color:#353535;
+    --grey-color:#7E7E7E;
     --lightGrey-color:rgba(246, 246, 246, 1);
     --hover-color:rgba(245, 237, 255, 1);
     --gradients-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -35,6 +35,7 @@ h2{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 .W300FS18{
@@ -50,6 +51,11 @@ a{
 .W700FS18{
     font-weight: 700;
     font-size: 18px;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -82,7 +88,7 @@ a{
 
 
 .iconGrey i{
-    color: $darkGrey-color;
+    color: $grey-color;
 }
 
 
@@ -110,7 +116,7 @@ nav{
             border: none;
             height: 100%;
             text-align: center;
-            color: var(--grey-color);
+            color: var(--darkGrey-color);
             &:focus{
                 outline: none;
             }
@@ -129,6 +135,12 @@ nav{
     @include button
 }
 
+.shadowHover:hover{
+    background: white;
+    color: $primary-color;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
 /**** fontionnement ***/
 .btn2{
     @include button2($lightGrey-color)
@@ -143,6 +155,7 @@ nav{
         color: $primary-color;
     }
     background: $hover-color;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -155,5 +168,64 @@ nav{
 margin: 0 20px 0 -12px;
     p{
         margin: auto 0px;
+    }
+}
+
+/********* Restaurant ***********/
+.card{
+    @include card1
+}
+
+.card{
+    img{
+        height: 175px;
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        object-fit:fill;
+    }
+}
+
+#rotate{
+    transform: rotate;
+    object-fit:cover;
+}
+
+.textCardflex{
+    display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+    padding: 0 10px;
+    h3, p{
+        margin: 8px;
+    }
+}
+
+/*********** Animation Heart ***********/
+.heart i:hover{
+    font-size: 50px;
+  color: transparent;
+  background-image: var(--gradients-color);
+}
+
+/**************** Footer *****************/
+
+footer{
+    height: 197px;
+    background: $darkGrey-color;
+    padding: 20px;
+    margin-top: 70px;
+    color: white;
+    svg{
+        width: 138px;
+        height: auto;
+        fill: #fff;
+        margin-bottom: 15px;
+    }
+    i{
+        margin-right: 10px;
+    }
+    p{
+        margin: 10px 0px;
     }
 }
