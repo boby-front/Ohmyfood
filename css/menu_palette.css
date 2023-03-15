@@ -38,6 +38,7 @@ h2 {
   font-weight: 300;
   font-size: 19px;
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
 section {
@@ -105,10 +106,24 @@ section {
 header {
   padding-top: 10px;
   height: 63px;
+  position: relative;
 }
 header .logoHeader {
   height: 35px;
   width: auto;
+}
+
+.arrowIcon {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transition: all 1s;
+}
+.arrowIcon i {
+  font-size: 1.8em;
+}
+.arrowIcon:hover {
+  transform: scale(1.5);
 }
 
 .imageStart {
@@ -161,6 +176,12 @@ main {
 }
 
 /******** Entré Plats Desserts ********/
+.line {
+  height: 4px;
+  width: 60px;
+  background-color: #99E2D0;
+}
+
 .btn3 {
   min-width: 322px;
   max-width: 100%;
@@ -172,6 +193,11 @@ main {
   margin: 25px auto;
   cursor: pointer;
   display: block;
+  transition: all 1.5s;
+}
+.btn3:hover {
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
 }
 
 .btn3 {
@@ -182,16 +208,16 @@ main {
 .btn3 p, .btn3 h3 {
   margin: 4px 0px;
 }
-.btn3:active .validateRight {
+.btn3:focus .validateRight {
   right: 0;
   display: block;
   text-align: center;
   animation: slide-in 1s ease-in-out;
 }
-.btn3:active .validateRight i {
+.btn3:focus .validateRight i {
   margin: 20px 0px;
 }
-.btn3:active .validateLeft {
+.btn3:focus .validateLeft {
   width: 85%;
 }
 
@@ -227,6 +253,36 @@ main {
   box-sizing: border-box;
   width: 100%;
   transition: width 1s;
+}
+
+/*********** Commander **********/
+.btnCommander {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  text-align: center;
+  width: 220px;
+  height: 50px;
+  margin: 20px 0px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 2s;
+}
+.btnCommander:hover {
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  background: white;
+  transform: scale(1.05);
+}
+
+.btnCommander {
+  margin: 20px auto;
+}
+.btnCommander:hover p {
+  color: #9356DC;
 }
 
 /**************** Footer **********/

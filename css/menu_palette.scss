@@ -43,6 +43,7 @@ h2{
     font-weight: 300;
     font-size: 19px;
     text-transform: uppercase;
+    margin-bottom: 2px;
 }
 
 section{
@@ -114,6 +115,19 @@ header{
     @include header_menu;
 }
 
+.arrowIcon{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transition: all 1s;
+    i{
+        font-size: 1.8em;
+    }
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+
 .imageStart{
     z-index:-10000000000;
     margin-bottom: -40px;
@@ -168,6 +182,11 @@ transition: all 1s;
  } 
 
  /******** Entré Plats Desserts ********/
+.line{
+    height: 4px;
+    width: 60px;
+    background-color: $green-color;
+}
 
  .btn3{
     @include button3
@@ -180,7 +199,7 @@ transition: all 1s;
     p, h3{
         margin:4px 0px;
     }
-    &:active{
+      &:focus{
         .validateRight{
             right: 0;
             display: block;
@@ -194,7 +213,7 @@ transition: all 1s;
             width: 85%;
         }
     }
-}
+ }
 
 @keyframes slide-in {
     from {
@@ -232,6 +251,21 @@ transition: all 1s;
     box-sizing: border-box;
     width: 100%;
     transition: width 1s;
+}
+
+/*********** Commander **********/
+
+.btnCommander{
+    @include button;
+}
+
+.btnCommander{
+    margin: 20px auto;
+    &:hover{
+        p{
+            color: $primary-color;
+        }
+    }
 }
 
 /**************** Footer **********/

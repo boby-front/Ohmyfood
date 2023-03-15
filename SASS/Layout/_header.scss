@@ -1,6 +1,7 @@
 @mixin header_menu{
         padding-top: 10px;
         height: 63px;
+        position: relative;
         .logoHeader{
             height: 35px;
             width: auto;
