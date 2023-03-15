@@ -16,6 +16,7 @@ html {
   max-width: 768px;
   margin: auto;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -134,9 +135,15 @@ nav .maps input:focus {
   cursor: pointer;
   font-family: "roboto", sans-serif;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 2s;
+}
+.btn1:hover {
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  background: white;
+  transform: scale(1.05s);
 }
 
-.shadowHover:hover {
+.btn1:hover {
   background: white;
   color: #9356DC;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
@@ -144,7 +151,7 @@ nav .maps input:focus {
 
 /**** fontionnement ***/
 .btn2 {
-  width: 322px;
+  min-width: 322px;
   height: 72px;
   border-radius: 20px;
   background: rgb(246, 246, 246);
@@ -156,14 +163,18 @@ nav .maps input:focus {
   padding: 0px;
   margin: 25px auto;
   cursor: pointer;
+  transition: all 1.5s;
+}
+.btn2:hover {
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .btn2 p {
   margin-left: 20px;
 }
 .btn2:hover {
-  background: rgb(245, 237, 255);
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  background-color: rgb(245, 237, 255);
 }
 .btn2:hover .iconPurple i {
   color: #9356DC;
@@ -175,7 +186,7 @@ nav .maps input:focus {
   width: 24px;
   height: 24px;
   color: white;
-  margin: 0 20px 0 -12px;
+  margin: 0 5% 0 -12px;
 }
 .cercleNumber p {
   margin: auto 0px;
@@ -183,12 +194,18 @@ nav .maps input:focus {
 
 /********* Restaurant ***********/
 .card {
-  width: 335px;
+  max-width: 70%;
+  min-width: 335px;
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 25px auto;
+  transition: all 1.5s;
+}
+.card:hover {
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .card img {
@@ -196,8 +213,8 @@ nav .maps input:focus {
   width: 100%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #rotate {
@@ -217,10 +234,32 @@ nav .maps input:focus {
 }
 
 /*********** Animation Heart ***********/
-.heart i:hover {
-  font-size: 50px;
-  color: transparent;
-  background-image: var(--gradients-color);
+.heart2 {
+  color: #9356DC;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.heart1 {
+  transition: all 1s;
+}
+
+.anim {
+  position: relative;
+  left: -30px;
+}
+.anim i {
+  font-size: 1.75em;
+  position: absolute;
+}
+
+.anim:hover .heart2 {
+  opacity: 1;
+  transform: scale(1);
+}
+.anim:hover .heart1 {
+  color: #9356DC;
+  transform: scale(1);
 }
 
 /**************** Footer *****************/

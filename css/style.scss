@@ -19,6 +19,7 @@ html{
     max-width:  768px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -78,6 +79,7 @@ a{
     width: 100%;
 }
 
+
 .textCenter{
     text-align: center;
 }
@@ -135,13 +137,14 @@ nav{
     @include button
 }
 
-.shadowHover:hover{
+.btn1:hover{
     background: white;
     color: $primary-color;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 /**** fontionnement ***/
+
 .btn2{
     @include button2($lightGrey-color)
 }
@@ -154,8 +157,7 @@ nav{
     .iconPurple i{
         color: $primary-color;
     }
-    background: $hover-color;
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    background-color: $hover-color;
   }
 }
 
@@ -165,7 +167,7 @@ nav{
     width: 24px;
     height: 24px;
     color: white;
-margin: 0 20px 0 -12px;
+    margin: 0 5% 0 -12px;
     p{
         margin: auto 0px;
     }
@@ -173,7 +175,7 @@ margin: 0 20px 0 -12px;
 
 /********* Restaurant ***********/
 .card{
-    @include card1
+    @include card1(70%)
 }
 
 .card{
@@ -182,7 +184,7 @@ margin: 0 20px 0 -12px;
         width: 100%;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
-        object-fit:fill;
+        object-fit:cover;
     }
 }
 
@@ -202,11 +204,38 @@ margin: 0 20px 0 -12px;
 }
 
 /*********** Animation Heart ***********/
-.heart i:hover{
-    font-size: 50px;
-  color: transparent;
-  background-image: var(--gradients-color);
+.heart2{
+    color: $primary-color;
+    opacity: 0;
+    transition: all 1.5s;
 }
+
+.heart1{
+transition: all 1s;
+}
+
+
+
+.anim {
+    position: relative;
+    left: -30px;
+    i{
+    font-size: 1.75em;
+    position: absolute;
+}
+}
+
+ .anim:hover{
+    .heart2{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .heart1{
+        color: $primary-color;
+        transform: scale(1);
+    }
+ }
+
 
 /**************** Footer *****************/
 
