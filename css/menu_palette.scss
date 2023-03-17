@@ -21,6 +21,7 @@ html{
     max-width:  768px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 body{
@@ -108,8 +109,76 @@ section{
 .iconGrey i{
     color: $grey-color;
 }
+/********* LOADER ***************/
 
+.loaderContainer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -400px;
+    background-color: #c7b2bcd7;
+    z-index: 10;
+    animation: flou 6s ease-in;
+    animation-fill-mode: forwards;
+    .loader{
+        font-size: 9vw;
+        font-family: "Shrikhand" , sans-serif;
+        color: $darkGrey-color;
+    }
+    .lettre{
+        animation: flash 1.2s linear infinite;
+    }
+}
 
+.lettre:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.lettre:nth-child(5) {
+    animation-delay: 1s;
+}
+.lettre:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.lettre:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.lettre:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+@keyframes flash {
+    0% {
+        color: $darkGrey-color;
+        text-shadow:  0 0 30px $darkGrey-color;
+    }
+    90% {
+        color: #c7b2bcd7;
+        text-shadow: none
+    }
+    100% {
+        color: white;
+        text-shadow:  0 0 30px white;
+    }
+}
+
+@keyframes flou {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 /*********** HEADER **************/
 header{
     @include header_menu;
