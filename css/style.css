@@ -68,7 +68,7 @@ a {
 }
 
 .boxShadow {
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px 0px rgba(8, 8, 8, 0.15);
 }
 
 .width100 {
@@ -280,4 +280,60 @@ footer i {
 }
 footer p {
   margin: 10px 0px;
+}
+
+/*********** Media Queries Desktop 1440px**********************/
+@media (min-width: 768px) {
+  html {
+    max-width: 1440px;
+  }
+  html body {
+    max-width: 1440px;
+  }
+  /*****Réserver  ***********/
+  .article-réserverPadding h2 {
+    font-size: 42px;
+  }
+  .article1440px h2 {
+    margin-left: 12%;
+  }
+  /****** Fonctionnement ******/
+  .containerBtnFonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 12%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .containerBtnFonctionnement a {
+    margin: 25px auto;
+  }
+  /***** Restaurant ****/
+  .containerCardsMenu {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    padding: 0px 50px;
+    box-sizing: border-box;
+  }
+  .containerCardsMenu .card {
+    margin: 25px 15px;
+  }
+  /******** Footer ***********/
+  .footerResponsivRow {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .footerResponsivRow svg {
+    margin: 2% 10% 0px 30px;
+  }
+  .footerResponsiv {
+    flex-direction: row;
+    align-items: center;
+    margin: 2% 0px 0px 10%;
+  }
+  .footerResponsiv p {
+    margin-right: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

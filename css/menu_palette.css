@@ -308,4 +308,45 @@ footer p {
 
 footer {
   margin-top: 0;
+}
+
+/*********** Media Queries Desktop 1440px**********************/
+@media (min-width: 768px) {
+  html {
+    max-width: 1440px;
+  }
+  html body {
+    max-width: 1440px;
+  }
+  .imageStart {
+    height: 370px;
+    margin: 0px 0px -60px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main {
+    max-width: 70%;
+    margin: 0px auto;
+    padding: 30px 12%;
+  }
+  main .fa-heart {
+    margin-left: 20px;
+  }
+  /******** Footer ***********/
+  .footerResponsivRow {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .footerResponsivRow svg {
+    margin: 2% 10% 0px 30px;
+  }
+  .footerResponsiv {
+    flex-direction: row;
+    align-items: center;
+    margin: 2% 0px 0px 10%;
+  }
+  .footerResponsiv p {
+    margin-right: 30px;
+  }
 }/*# sourceMappingURL=menu_palette.css.map */
