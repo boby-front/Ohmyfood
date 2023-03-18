@@ -103,81 +103,6 @@ section {
   color: #7E7E7E;
 }
 
-/********* LOADER ***************/
-.loaderContainer {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: -400px;
-  background-color: rgba(199, 178, 188, 0.8431372549);
-  z-index: 10;
-  animation: flou 6s ease-in;
-  animation-fill-mode: forwards;
-}
-.loaderContainer .loader {
-  font-size: 9vw;
-  font-family: "Shrikhand", sans-serif;
-  color: #353535;
-}
-.loaderContainer .lettre {
-  animation: flash 1.2s linear infinite;
-}
-
-.lettre:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.lettre:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.lettre:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.lettre:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-.lettre:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.lettre:nth-child(6) {
-  animation-delay: 1.2s;
-}
-
-.lettre:nth-child(7) {
-  animation-delay: 1.4s;
-}
-
-.lettre:nth-child(8) {
-  animation-delay: 1.6s;
-}
-
-@keyframes flash {
-  0% {
-    color: #353535;
-    text-shadow: 0 0 30px #353535;
-  }
-  90% {
-    color: rgba(199, 178, 188, 0.8431372549);
-    text-shadow: none;
-  }
-  100% {
-    color: white;
-    text-shadow: 0 0 30px white;
-  }
-}
-@keyframes flou {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 /*********** HEADER **************/
 header {
   padding-top: 10px;
@@ -227,10 +152,6 @@ main {
   transition: all 1.5s;
 }
 
-.heart1 {
-  transition: all 1s;
-}
-
 .anim {
   position: relative;
   left: -30px;
@@ -243,11 +164,9 @@ main {
 
 .anim:hover .heart2 {
   opacity: 1;
-  transform: scale(1);
 }
 .anim:hover .heart1 {
   color: #9356DC;
-  transform: scale(1);
 }
 
 /******** Entré Plats Desserts ********/
@@ -328,6 +247,87 @@ main {
   box-sizing: border-box;
   width: 100%;
   transition: width 1s;
+}
+
+/*********** Animation Aparition *****************/
+/* Aparition Menu */
+section {
+  overflow: hidden;
+}
+
+.aparition {
+  opacity: 0;
+  animation-delay: 1s;
+  animation: aparition 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aparition:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.aparition:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.aparition:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.aparition:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.aparition:nth-child(5) {
+  animation-delay: 2.2s;
+}
+
+.aparition:nth-child(6) {
+  animation-delay: 2.6s;
+}
+
+.aparition:nth-child(7) {
+  animation-delay: 2.6s;
+}
+
+.aparition:nth-child(8) {
+  animation-delay: 3s;
+}
+
+.aparition:nth-child(9) {
+  animation-delay: 3.4s;
+}
+
+.aparition:nth-child(10) {
+  animation-delay: 3.8s;
+}
+
+.aparition:nth-child(11) {
+  animation-delay: 4.2s;
+}
+
+.aparition:nth-child(12) {
+  animation-delay: 4.2s;
+}
+
+.aparition:nth-child(13) {
+  animation-delay: 4.6s;
+}
+
+.aparition:nth-child(14) {
+  animation-delay: 5s;
+}
+
+.aparition:nth-child(15) {
+  animation-delay: 5.4s;
 }
 
 /*********** Commander **********/
@@ -413,8 +413,8 @@ footer {
     align-items: center;
     flex-direction: row-reverse;
   }
-  .footerResponsivRow svg {
-    margin: 2% 10% 0px 30px;
+  .footerResponsivRow a {
+    margin: 3% 10% 0px 30px;
   }
   .footerResponsiv {
     flex-direction: row;

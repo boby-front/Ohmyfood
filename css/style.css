@@ -15,6 +15,7 @@
 html {
   max-width: 768px;
   margin: auto;
+  position: relative;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
@@ -87,6 +88,82 @@ a {
   color: #7E7E7E;
 }
 
+/********* LOADER ***************/
+.loaderContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -200px;
+  background-color: #99E2D0;
+  transform: scale(1.05);
+  z-index: 10;
+  animation: flou 8s ease-in;
+  animation-fill-mode: forwards;
+}
+.loaderContainer .loader {
+  font-size: 9vw;
+  font-family: "Shrikhand", sans-serif;
+  color: #353535;
+}
+.loaderContainer .lettre {
+  animation: flash 1.2s linear infinite;
+}
+
+.lettre:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+@keyframes flash {
+  0% {
+    color: #353535;
+    text-shadow: 0 0 30px #353535;
+  }
+  90% {
+    color: rgba(199, 178, 188, 0.8431372549);
+    text-shadow: none;
+  }
+  100% {
+    color: white;
+    text-shadow: 0 0 30px white;
+  }
+}
+@keyframes flou {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 /*********** HEADER **************/
 header {
   padding-top: 10px;
@@ -234,13 +311,8 @@ nav .maps input:focus {
 
 /*********** Animation Heart ***********/
 .heart2 {
-  color: #9356DC;
   opacity: 0;
-  transition: all 1.5s;
-}
-
-.heart1 {
-  transition: all 1s;
+  transition: all 4.5s;
 }
 
 .anim {
@@ -255,10 +327,10 @@ nav .maps input:focus {
 .anim:hover .heart2 {
   opacity: 1;
   transform: scale(1);
+  color: #9356DC;
 }
 .anim:hover .heart1 {
   color: #9356DC;
-  transform: scale(1);
 }
 
 /**************** Footer *****************/
@@ -325,13 +397,13 @@ footer p {
     align-items: center;
     flex-direction: row-reverse;
   }
-  .footerResponsivRow svg {
+  .footerResponsivRow a {
     margin: 2% 10% 0px 30px;
   }
   .footerResponsiv {
     flex-direction: row;
     align-items: center;
-    margin: 2% 0px 0px 10%;
+    margin: 1% 0px 0px 10%;
   }
   .footerResponsiv p {
     margin-right: 30px;
