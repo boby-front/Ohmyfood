@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 400;
   font-family: "Shrikhand", sans-serif;
 }
@@ -141,7 +141,7 @@ main {
 }
 
 .titleRestaurant {
-  padding-right: 20px;
+  padding-right: 1%;
   box-sizing: border-box;
 }
 
@@ -175,6 +175,12 @@ main {
   height: 4px;
   width: 60px;
   background-color: #99E2D0;
+}
+
+.suspension {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn3 {
@@ -393,6 +399,9 @@ footer {
   }
   html body {
     max-width: 1440px;
+  }
+  html body h1 {
+    font-size: 35px;
   }
   .imageStart {
     height: 370px;

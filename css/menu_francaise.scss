@@ -144,7 +144,7 @@ main{
 }
 
 .titleRestaurant{
-    padding-right: 20px;
+    padding-right: 1%;
     box-sizing: border-box;
 }
 
@@ -182,6 +182,13 @@ main{
     width: 60px;
     background-color: $green-color;
 }
+
+.suspension{ 
+    white-space: nowrap;
+    overflow : hidden;
+    -o-text-overflow : ellipsis;  
+    text-overflow :    ellipsis;
+  }
 
  .btn3{
     @include button3
@@ -350,6 +357,9 @@ footer{
         max-width: 1440px;
         body{
             max-width: 1440px;
+            h1{
+                font-size: 35px;
+            }
         }
     }
 
