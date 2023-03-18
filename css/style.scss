@@ -100,7 +100,7 @@ a{
     height: 100%;
     width: 100%;
     position: absolute;
-    top: -200px;
+    top: -800px;
     background-color: $green-color;
     transform: scale(1.05);;
     z-index: 10;
@@ -326,12 +326,18 @@ footer{
 
 /*********** Media Queries Desktop 1440px**********************/
 
+
 @media (min-width: 768px){
     html{
         max-width: 1440px;
         body{
             max-width: 1440px;
         }
+        /****** Loader ******/
+        
+       .loaderContainer{
+    top: -200px;
+       }
     }
 
     /*****Réserver  ***********/

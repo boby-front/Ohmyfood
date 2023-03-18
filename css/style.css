@@ -93,7 +93,7 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -200px;
+  top: -800px;
   background-color: #99E2D0;
   transform: scale(1.05);
   z-index: 10;
@@ -358,9 +358,13 @@ footer p {
 @media (min-width: 768px) {
   html {
     max-width: 1440px;
+    /****** Loader ******/
   }
   html body {
     max-width: 1440px;
+  }
+  html .loaderContainer {
+    top: -200px;
   }
   /*****Réserver  ***********/
   .article-réserverPadding h2 {
