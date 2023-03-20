@@ -23,7 +23,7 @@
 }
 
 @mixin button2($background-color){
-    min-width: 322px;
+    width: 322px;
     height: 72px;
     border-radius: 20px;
     background: $background-color;

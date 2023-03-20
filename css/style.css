@@ -15,7 +15,6 @@
 html {
   max-width: 768px;
   margin: auto;
-  position: relative;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
@@ -23,6 +22,7 @@ html {
 body {
   margin: 0px;
   max-width: 768px;
+  position: relative;
 }
 
 h2 {
@@ -82,10 +82,6 @@ a {
 
 .backgroundGrey {
   background: rgb(246, 246, 246);
-}
-
-.iconGrey i {
-  color: #7E7E7E;
 }
 
 /********* LOADER ***************/
@@ -227,7 +223,7 @@ nav .maps input:focus {
 
 /**** fontionnement ***/
 .btn2 {
-  min-width: 322px;
+  width: 322px;
   height: 72px;
   border-radius: 20px;
   background: rgb(246, 246, 246);
@@ -266,6 +262,14 @@ nav .maps input:focus {
 }
 .cercleNumber p {
   margin: auto 0px;
+}
+
+.containerBtnFonctionnement a {
+  margin: 25px auto;
+}
+
+.iconGrey i {
+  color: #7E7E7E;
 }
 
 /********* Restaurant ***********/
@@ -312,7 +316,7 @@ nav .maps input:focus {
 /*********** Animation Heart ***********/
 .heart2 {
   opacity: 0;
-  transition: all 4.5s;
+  transition: opacity 3s;
 }
 
 .anim {
@@ -327,9 +331,6 @@ nav .maps input:focus {
 .anim:hover .heart2 {
   opacity: 1;
   transform: scale(1);
-  color: #9356DC;
-}
-.anim:hover .heart1 {
   color: #9356DC;
 }
 
