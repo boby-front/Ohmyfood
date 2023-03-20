@@ -264,6 +264,24 @@ nav{
         border-top-left-radius: 15px;
         object-fit:cover;
     }
+    
+}
+
+.New{
+    position: absolute;
+    background-color: $green-color;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    right: 15px;
+    top: 15px;
+    z-index: 10;
+    transition: all 1.5s;
+    border-radius: 3px;
+    p{
+        color: $green-font;
+        font-weight: 500;
+        margin: 10px 20px;
+    }
 }
 
 #rotate{
