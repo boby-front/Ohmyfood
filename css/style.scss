@@ -96,10 +96,10 @@ a{
 .loaderContainer{
     height: 100%;
     width: 100%;
+    margin: auto;
+    background-color: $green-color;
     position: absolute;
     top: -800px;
-    background-color: $green-color;
-    transform: scale(1.05);;
     z-index: 10;
     animation: flou 8s ease-in;
     animation-fill-mode: forwards;
@@ -303,9 +303,13 @@ nav{
 .heart2{
      opacity: 0;
      color: white;
+     line-height: 1;
     transition: all 2s ease-in-out;
 }
 
+.heart1{
+    line-height: 1;
+}
 
 
 .anim {
@@ -321,9 +325,10 @@ nav{
     .heart2{
         opacity: 1;
         transform: scale(1);
-        color: $primary-color;
-        
-        
+        background: $gradients-color;
+        background-clip: text;
+        color: transparent;
+        line-height: 1;  
     }
     .heart1{
         opacity: 0;
@@ -415,8 +420,8 @@ footer{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    a{
-        margin: 2% 10% 0px 30px;
+    svg{
+        margin: 1% 10% 0px 30px;
     }
 }
 
@@ -428,6 +433,10 @@ footer{
         margin-right: 30px;
     }
   }
+}
+
+.mail{
+    color: white;
 }
 
 

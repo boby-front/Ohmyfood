@@ -152,9 +152,13 @@ main{
 .heart2{
     color: $primary-color;
     opacity: 0;
+    line-height: 1;
     transition: all 1.5s;
 }
 
+.heart1{
+    line-height: 1;
+}
 
 .anim {
     position: relative;
@@ -169,9 +173,10 @@ main{
  .anim:hover{
     .heart2{
         opacity: 1;
-    }
-    .heart1{
-        color: $primary-color;
+        background: $gradients-color;
+        background-clip: text;
+        color: transparent;
+        line-height: 1; 
     }
  } 
 
@@ -382,8 +387,8 @@ footer{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    a{
-        margin: 3% 10% 0px 30px;
+    svg{
+        margin: 2% 10% 0px 30px;
     }
 }
 
@@ -394,5 +399,9 @@ footer{
     p{
         margin-right: 30px;
     }
+  }
 }
+
+.mail{
+    color: white;
 }

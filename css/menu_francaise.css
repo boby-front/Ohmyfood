@@ -149,7 +149,12 @@ main {
 .heart2 {
   color: #9356DC;
   opacity: 0;
+  line-height: 1;
   transition: all 1.5s;
+}
+
+.heart1 {
+  line-height: 1;
 }
 
 .anim {
@@ -165,9 +170,11 @@ main {
 .anim:hover .heart2 {
   opacity: 1;
   transform: scale(1);
-}
-.anim:hover .heart1 {
-  color: #9356DC;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  line-height: 1;
 }
 
 /******** Entré Plats Desserts ********/
@@ -423,8 +430,8 @@ footer {
     align-items: center;
     flex-direction: row-reverse;
   }
-  .footerResponsivRow a {
-    margin: 3% 10% 0px 30px;
+  .footerResponsivRow svg {
+    margin: 2% 10% 0px 30px;
   }
   .footerResponsiv {
     flex-direction: row;
@@ -434,4 +441,7 @@ footer {
   .footerResponsiv p {
     margin-right: 30px;
   }
+}
+.mail {
+  color: white;
 }/*# sourceMappingURL=menu_francaise.css.map */

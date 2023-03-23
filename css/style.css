@@ -88,10 +88,10 @@ a {
 .loaderContainer {
   height: 100%;
   width: 100%;
+  margin: auto;
+  background-color: #99E2D0;
   position: absolute;
   top: -800px;
-  background-color: #99E2D0;
-  transform: scale(1.05);
   z-index: 10;
   animation: flou 8s ease-in;
   animation-fill-mode: forwards;
@@ -275,7 +275,7 @@ nav .maps input:focus {
 /********* Restaurant ***********/
 .card {
   max-width: 70%;
-  min-width: 335px;
+  min-width: 320px;
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -338,7 +338,12 @@ nav .maps input:focus {
 .heart2 {
   opacity: 0;
   color: white;
+  line-height: 1;
   transition: all 2s ease-in-out;
+}
+
+.heart1 {
+  line-height: 1;
 }
 
 .anim {
@@ -353,7 +358,11 @@ nav .maps input:focus {
 .anim:hover .heart2 {
   opacity: 1;
   transform: scale(1);
-  color: #9356DC;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  line-height: 1;
 }
 .anim:hover .heart1 {
   opacity: 0;
@@ -427,8 +436,8 @@ footer p {
     align-items: center;
     flex-direction: row-reverse;
   }
-  .footerResponsivRow a {
-    margin: 2% 10% 0px 30px;
+  .footerResponsivRow svg {
+    margin: 1% 10% 0px 30px;
   }
   .footerResponsiv {
     flex-direction: row;
@@ -438,4 +447,7 @@ footer p {
   .footerResponsiv p {
     margin-right: 30px;
   }
+}
+.mail {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
