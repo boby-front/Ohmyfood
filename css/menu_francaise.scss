@@ -150,23 +150,29 @@ main{
 
 /*********** Animation Heart ***********/
 .heart2{
-    color: $primary-color;
     opacity: 0;
     line-height: 1;
     transition: all 1.5s;
+    transform: scale(0.2);
+    color: transparent;
+    background: $gradients-color;
+    background-clip: text;
+    position: absolute;
 }
 
 .heart1{
     line-height: 1;
+    position: absolute;
 }
 
+
 .anim {
+    top: -15px;
     position: relative;
     left: -30px;
     cursor: pointer;
     i{
     font-size: 1.75em;
-    position: absolute;
 }
 }
 
@@ -355,6 +361,11 @@ footer{
     margin-top: 0;
 }
 
+
+.mail{
+    color: white;
+}
+
 /*********** Media Queries Desktop 1440px**********************/
 
 @media (min-width: 768px){
@@ -383,26 +394,25 @@ footer{
             }
         }
 /******** Footer ***********/
-
+footer{
+    height: 127px;
+    }
+    
 .footerResponsivRow{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     svg{
-        margin: 2% 10% 0px 30px;
+        margin: 2% 10px 0px 0px;
     }
 }
 
 .footerResponsiv{
     flex-direction: row;
     align-items: center;
-    margin:2% 0px 0px 10%;
+    margin:2% 0px 0px 0px;
     p{
         margin-right: 30px;
     }
   }
-}
-
-.mail{
-    color: white;
 }

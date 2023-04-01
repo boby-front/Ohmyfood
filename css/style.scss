@@ -16,7 +16,7 @@
 
 
 html{
-    max-width:  767.8px;
+    max-width:  768px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
@@ -32,7 +32,7 @@ h2{
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
-    margin: 50px 20px 20px 20px;
+    margin: 50px 0px 20px 10%;
 }
 
 a{
@@ -201,6 +201,9 @@ nav{
 /***** Reserver *****/
 .article-réserverPadding{
     padding: 40px 20px;
+    h2{
+        margin-left: 0px;
+    }
 }
 
 
@@ -252,11 +255,22 @@ nav{
 }
 
 /********* Restaurant ***********/
-.card{
-    @include card1(70%)
+.sectionRestaurant{
+    margin-top: 40px;
+    padding-top: 20px;
+    h2{
+        margin-top: 0px;
+    }
 }
 
 .card{
+    @include card1;
+}
+
+
+
+.card{
+    width: 80%;
     img{
         height: 175px;
         width: 100%;
@@ -299,26 +313,36 @@ nav{
     }
 }
 
+.paddingBottom{
+    padding-bottom: 25px;
+}
+
 /*********** Animation Heart ***********/
 .heart2{
-     opacity: 0;
-     color: white;
-     line-height: 1;
-    transition: all 2s ease-in-out;
+    opacity: 0;
+    line-height: 1;
+    transition: all 1.5s;
+    transform: scale(0.2);
+    color: transparent;
+    background: $gradients-color;
+    background-clip: text;
 }
 
 .heart1{
     line-height: 1;
+    opacity: 1;
+    transition: opacity 2.2s;
 }
 
 
 .anim {
     position: relative;
     left: -30px;
+    cursor: pointer;
     i{
     font-size: 1.75em;
     position: absolute;
- }
+}
 }
 
  .anim:hover{
@@ -328,21 +352,22 @@ nav{
         background: $gradients-color;
         background-clip: text;
         color: transparent;
-        line-height: 1;  
+        line-height: 1; 
     }
     .heart1{
         opacity: 0;
     }
- }
+ } 
 
+ 
 
+ 
 /**************** Footer *****************/
 
 footer{
-    height: 197px;
+    height: 167px;
     background: $darkGrey-color;
     padding: 20px;
-    margin-top: 70px;
     color: white;
     svg{
         width: 138px;
@@ -354,8 +379,11 @@ footer{
         margin-right: 10px;
       }
     p{
-        margin: 10px 0px;
+        margin: 6px 0px;
      }
+     .mail{
+        color: white;
+    }
  }
 
 /*********** Media Queries Desktop 1440px**********************/
@@ -392,51 +420,52 @@ footer{
 
     .containerBtnFonctionnement{
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 0px 12%;
         width: 100% ;
         box-sizing: border-box;
         a{
-            margin: 25px auto;    
+            margin: 25px 0px; 
+            width: 30%;   
         }
     }
 
-    /***** Restaurant ****/
+    
 
-    .containerCardsMenu{
-        display: flex;
-        overflow-x: auto;
-        width: 100%;
-        padding:0px 50px;
-        box-sizing: border-box;
-        .card{
-            margin:25px 15px;
-            }
-    }
+
+/******** Restaurant ******/
+
+.cardResponsiv{
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    box-sizing: border-box;
+}
+.card{
+    max-width: 38%;
+    display: block;
+}
 
 /******** Footer ***********/
+footer{
+height: 127px;
+}
 
 .footerResponsivRow{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     svg{
-        margin: 1% 10% 0px 30px;
+        margin: 2% 10px 0px 0px;
     }
 }
 
 .footerResponsiv{
     flex-direction: row;
     align-items: center;
-    margin:1% 0px 0px 10%;
+    margin:2% 0px 0px 0px;
     p{
         margin-right: 30px;
-    }
+    }  
   }
 }
-
-.mail{
-    color: white;
-}
-
-

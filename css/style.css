@@ -13,7 +13,7 @@
 }
 
 html {
-  max-width: 767.8px;
+  max-width: 768px;
   margin: auto;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
@@ -29,7 +29,7 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  margin: 50px 20px 20px 20px;
+  margin: 50px 0px 20px 10%;
 }
 
 a {
@@ -194,6 +194,9 @@ nav .maps input:focus {
 .article-réserverPadding {
   padding: 40px 20px;
 }
+.article-réserverPadding h2 {
+  margin-left: 0px;
+}
 
 .btn1 {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
@@ -223,7 +226,7 @@ nav .maps input:focus {
 
 /**** fontionnement ***/
 .btn2 {
-  width: 322px;
+  width: 75%;
   height: 72px;
   border-radius: 20px;
   background: rgb(246, 246, 246);
@@ -273,9 +276,15 @@ nav .maps input:focus {
 }
 
 /********* Restaurant ***********/
+.sectionRestaurant {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.sectionRestaurant h2 {
+  margin-top: 0px;
+}
+
 .card {
-  max-width: 70%;
-  min-width: 320px;
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -292,6 +301,9 @@ nav .maps input:focus {
   transform: scale(1.05);
 }
 
+.card {
+  width: 80%;
+}
 .card img {
   height: 175px;
   width: 100%;
@@ -334,21 +346,32 @@ nav .maps input:focus {
   margin: 8px;
 }
 
+.paddingBottom {
+  padding-bottom: 25px;
+}
+
 /*********** Animation Heart ***********/
 .heart2 {
   opacity: 0;
-  color: white;
   line-height: 1;
-  transition: all 2s ease-in-out;
+  transition: all 1.5s;
+  transform: scale(0.2);
+  color: transparent;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .heart1 {
   line-height: 1;
+  opacity: 1;
+  transition: opacity 2.2s;
 }
 
 .anim {
   position: relative;
   left: -30px;
+  cursor: pointer;
 }
 .anim i {
   font-size: 1.75em;
@@ -370,10 +393,9 @@ nav .maps input:focus {
 
 /**************** Footer *****************/
 footer {
-  height: 197px;
+  height: 167px;
   background: #353535;
   padding: 20px;
-  margin-top: 70px;
   color: white;
 }
 footer svg {
@@ -386,7 +408,10 @@ footer i {
   margin-right: 10px;
 }
 footer p {
-  margin: 10px 0px;
+  margin: 6px 0px;
+}
+footer .mail {
+  color: white;
 }
 
 /*********** Media Queries Desktop 1440px**********************/
@@ -411,43 +436,44 @@ footer p {
   /****** Fonctionnement ******/
   .containerBtnFonctionnement {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0px 12%;
     width: 100%;
     box-sizing: border-box;
   }
   .containerBtnFonctionnement a {
-    margin: 25px auto;
+    margin: 25px 0px;
+    width: 30%;
   }
-  /***** Restaurant ****/
-  .containerCardsMenu {
+  /******** Restaurant ******/
+  .cardResponsiv {
     display: flex;
-    overflow-x: auto;
-    width: 100%;
-    padding: 0px 50px;
+    align-items: center;
+    padding: 0 7%;
     box-sizing: border-box;
   }
-  .containerCardsMenu .card {
-    margin: 25px 15px;
+  .card {
+    max-width: 38%;
+    display: block;
   }
   /******** Footer ***********/
+  footer {
+    height: 127px;
+  }
   .footerResponsivRow {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
   }
   .footerResponsivRow svg {
-    margin: 1% 10% 0px 30px;
+    margin: 2% 10px 0px 0px;
   }
   .footerResponsiv {
     flex-direction: row;
     align-items: center;
-    margin: 1% 0px 0px 10%;
+    margin: 2% 0px 0px 0px;
   }
   .footerResponsiv p {
     margin-right: 30px;
   }
-}
-.mail {
-  color: white;
 }/*# sourceMappingURL=style.css.map */
