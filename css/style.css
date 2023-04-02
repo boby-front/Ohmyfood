@@ -37,6 +37,7 @@ a {
   color: black;
 }
 
+/***********TOOLBOX *********/
 .W300FS18 {
   font-weight: 300;
   font-size: 18px;
@@ -375,6 +376,7 @@ nav .maps input:focus {
 }
 .anim i {
   font-size: 1.75em;
+  padding: 3px;
   position: absolute;
 }
 
