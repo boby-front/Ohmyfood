@@ -1,7 +1,5 @@
-@import "../SASS/Composants/button";
-@import "../SASS/Utils/variables";
-@import "../SASS/Layout/header";
-@import "../SASS/Layout/footer";
+@import "main";
+
 
 :root{
     --color-background:#F7F7F7;
@@ -33,6 +31,7 @@ h1{
    font-size: 7vw;
    font-weight: 400; 
    font-family: "Shrikhand", sans-serif;
+   
 }
 
 a{
@@ -110,7 +109,6 @@ section{
     color: $grey-color;
 }
 
-
 /*********** HEADER **************/
 header{
     @include header_menu;
@@ -130,8 +128,9 @@ header{
 
 .imageStart{
     z-index:-10000000000;
-    margin-bottom: -40px;
+    margin-bottom: -40px; 
 }
+
 
 /********* MAIN ***************/
 main{
@@ -151,17 +150,20 @@ main{
 .heart2{
     opacity: 0;
     line-height: 1;
-    transition: all 1.5s;
+    transition: all 2s;
     transform: scale(0.2);
     color: transparent;
     background: $gradients-color;
     background-clip: text;
+    -webkit-background-clip: text;
     position: absolute;
 }
 
 .heart1{
     line-height: 1;
     position: absolute;
+    opacity: 1;
+    transition: opacity 2.2s;
 }
 
 
@@ -181,9 +183,13 @@ main{
         transform: scale(1);
         background: $gradients-color;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         line-height: 1; 
     }
+.heart1{
+    opacity: 0;
+}
  } 
 
  /******** Entré Plats Desserts ********/
@@ -199,6 +205,7 @@ main{
     -o-text-overflow : ellipsis;  
     text-overflow :    ellipsis;
   }
+
 
  .btn3{
     @include button3
@@ -412,6 +419,6 @@ footer{
     margin:2% 0px 0px 0px;
     p{
         margin-right: 30px;
-    }
+    }  
   }
 }

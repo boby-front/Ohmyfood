@@ -1,0 +1,9 @@
+{
+  "name": "projet-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    "sass": "sass --watch ./sass/index.scss:./css/index.css ./sass/restaurants.scss:./css/restaurants.css"  },
+  "author": "",
+  "license": "ISC"
+}

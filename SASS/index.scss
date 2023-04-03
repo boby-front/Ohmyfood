@@ -1,5 +1,5 @@
-@import "../SASS/Composants/button";
-@import "../SASS/Utils/variables";
+@import "main";
+
 
 :root{
     --color-background:#F7F7F7;
@@ -322,11 +322,14 @@ nav{
 .heart2{
     opacity: 0;
     line-height: 1;
-    transition: all 1.5s;
+    transition: all 2s;
     transform: scale(0.2);
     color: transparent;
     background: $gradients-color;
     background-clip: text;
+    -webkit-background-clip: text;
+
+    
 }
 
 .heart1{
@@ -353,6 +356,8 @@ nav{
         transform: scale(1);
         background: $gradients-color;
         background-clip: text;
+        -webkit-background-clip: text;
+
         color: transparent;
         line-height: 1; 
     }
