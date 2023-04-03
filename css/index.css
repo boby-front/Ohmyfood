@@ -330,11 +330,6 @@ nav .maps input:focus {
   margin: 10px 20px;
 }
 
-#rotate {
-  transform: rotate;
-  object-fit: cover;
-}
-
 .textCardflex {
   display: flex;
   justify-content: space-between;

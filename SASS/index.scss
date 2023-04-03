@@ -299,11 +299,6 @@ nav{
     }
 }
 
-#rotate{
-    transform: rotate;
-    object-fit:cover;
-}
-
 .textCardflex{
     display: flex;
 	justify-content: space-between;
@@ -357,7 +352,6 @@ nav{
         background: $gradients-color;
         background-clip: text;
         -webkit-background-clip: text;
-
         color: transparent;
         line-height: 1; 
     }
